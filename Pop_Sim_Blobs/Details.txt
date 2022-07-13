@@ -1,0 +1,4 @@
+In this version of the code QuadTree structure has been inplemented purely to only get the food which is in the surrounding area of the blob as determined by it's range.
+
+The value of the food is scaled to the population size so that a larger population will decrease the total energy which is added to the world each frame. No cap on the number of food bits that can be added.
+
