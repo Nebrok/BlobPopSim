@@ -68,7 +68,7 @@ class Blob {
 
   move(arry) {
     if (this.isDead()) {
-      
+      pass
     } else {
       if (this.detect_closest_object(arry) == "None") {
         this.x += this.speed

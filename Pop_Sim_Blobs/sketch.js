@@ -61,7 +61,7 @@ function draw() {
     frame_Count = 0
   } else {
     //Environment
-    total_food_val_per_frame = (10 / (blobs.length / 4)) * 1000
+    total_food_val_per_frame = (40000 / blobs.length)
     fpf = 4
     food_val = total_food_val_per_frame / fpf
     
@@ -71,12 +71,6 @@ function draw() {
     for (i = 0; i < food.length; i++) {
       food[i].draw(screenx, screeny)
     }
-    // if (food.length <= 500) {
-      // for (i = 0; i < fpf; i++) {
-      //   let meal = new Food(random() * worldSize[0], random() * worldSize[1], food_val)
-      //   food.push(meal)
-      // }
-    // }
     for (i = 0; i < fpf; i++) {
       let meal = new Food(random() * worldSize[0], random() * worldSize[1], food_val)
       food.push(meal)
@@ -100,7 +94,6 @@ function draw() {
       blobs[b].move(close_food);
       blobs[b].draw(screenx, screeny);
       blobs[b].reproduce(blobs)
-      //console.log(blobs[b].energy)
     }
     for (b = blobs.length; b > 0; b--) {
       if (blobs[b - 1].isDead()) {
